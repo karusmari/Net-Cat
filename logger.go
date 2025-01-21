@@ -13,8 +13,13 @@ type LogEntry struct {
 	Message   string
 }
 
+var Mutex sync.Mutex
+
 // this function logs the chat history to a file
 func logToFile(entry LogEntry) error {
+	Mutex.Lock()
+    	defer Mutex.Unlock()
+	
 	file, err := os.OpenFile("chat_history.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
