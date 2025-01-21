@@ -66,14 +66,7 @@ func (s *Server) handleClient(conn net.Conn) {
 	client := s.AddClient(conn, clientName) //add client to the server
 	defer s.DisconnectClient(client)
 
-	go s.sendMessages(client)
 	s.HandleIncomingMessages(client)
-}
-
-func (s *Server) WelcomeClient(client *Client) {
-	welcomeMsg := FormatSystemMessage(client.name, "has joined the chat")
-	s.broadcast(welcomeMsg, client)
-	s.sendHistory(client)
 }
 
 func (s *Server) AddClient(conn net.Conn, name string) *Client {
