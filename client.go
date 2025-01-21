@@ -17,7 +17,7 @@ type Client struct {
 
 func (s *Server) ClientName(conn net.Conn) (string, error) {
 	scanner := bufio.NewScanner(conn)
-	conn.Write([]byte(welcomeArt))
+	
 	var name string
 
 	for scanner.Scan() {
