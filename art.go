@@ -1,5 +1,4 @@
 package main
-
 const welcomeArt = `Welcome to TCP-Chat!
          _nnnn_
         dGGGGMMb
@@ -13,10 +12,10 @@ const welcomeArt = `Welcome to TCP-Chat!
    HZM            MMMM
    FqM            MMMM
  __| ".        |\dS"qML
- |    '.       | '\ \Zq
+ |    `+"`"+`.       | `+"`"+`'\ \Zq
 _)      \.___.,|     .'
 \____   )MMMMMP|   .'
-     '-'       '--'
+     `+"`"+`-'       `+"`"+`--'
 Commands:
 * To exit the chat type '/quit' or '/exit'
 [ENTER YOUR NAME]:`
